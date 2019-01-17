@@ -1,0 +1,63 @@
+/* Below are added for my project"*/
+
+.wrapper {
+  position: relative;
+  top: 0;
+  height: 100vh;
+  background-color: yellow;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 260px;
+  display: block;
+  background-color: #2d2d2d;
+  font-weight: 200;
+}
+
+.sidebar .logo {
+  padding: 20px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.sidebar .logo .logo-img {
+  width: 34px;
+  display: inline-block;
+  height: 34px;
+  margin-left: -2px;
+  margin-top: -9px;
+  margin-right: 10px;
+  text-align: center;
+  overflow: visible;
+}
+
+.sidebar .sidebar-wrapper {
+  position: relative;
+  height: calc(100vh - 75px);
+  overflow: auto;
+  width: 260px;
+  z-index: 4;
+  padding-bottom: 30px;
+  background-color: orangered;
+}
+
+.sidebar .log-name {
+  display: inline-block;
+  font-size: 30px;
+  display: inline;
+  font-weight: 900;
+  margin-left: 20px;
+  font-family: "Times New Roman";
+  color: whitesmoke;
+}
+
+.main-panel {
+  background: rgba(203, 203, 210, 0.15);
+  position: relative;
+  float: right;
+  width: calc(100% - 260px);
+}
