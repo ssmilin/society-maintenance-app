@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 
 class DashBoard extends Component {
   render() {
+    let legend = "";
     return (
       <div className="contentpanel-wrapper">
         <Grid fluid>
@@ -66,6 +67,14 @@ class DashBoard extends Component {
                 charttype="Line"
                 title="Income vs Expense"
                 subtitle="Last 6 months trend"
+                legend={
+                  <div className="legend">
+                    <i class="fa fa-circle text-info1" />
+                    Income
+                    <i class="fa fa-circle text-info2" />
+                    Expense
+                  </div>
+                }
               />
             </Col>
             <Col lg={4}>
@@ -73,6 +82,14 @@ class DashBoard extends Component {
                 charttype="Pie"
                 title="Subscription Details"
                 subtitle="Current Month"
+                legend={
+                  <div className="legend">
+                    <i class="fa fa-circle text-info1" />
+                    Paid
+                    <i class="fa fa-circle text-info2" />
+                    Pending
+                  </div>
+                }
               />
             </Col>
           </Row>
