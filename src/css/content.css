@@ -1,63 +1,57 @@
-/* header + content - sidebar */
-.main-panel {
-    background: rgba(203, 203, 210, 0.15);
-    position: relative;
-    float: right;
-    width: calc(100% - 260px); }
- /*main panel - header bar */ 
+/*main panel - header bar */
 .contentpanel-wrapper {
-position: relative;
-height: 100vh;
+  position: relative;
+  height: 100vh;
 }
 .contentpanel-wrapper .stats {
-    border-radius: 10px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border-bottom:20px;
-    background-color:white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-bottom: 20px;
+  background-color: white;
 }
 .contentpanel-wrapper .stats .quickstats {
-    border-radius: 4px;
-    border-style: solid;
-    border-width: thin;
-    margin-bottom:30px;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: thin;
+  margin-bottom: 30px;
 }
 .quickstats .text-center {
-    text-align: center;
-    padding: 35px 10px 0px;
-    float:left;
+  text-align: center;
+  padding: 35px 10px 0px;
+  float: left;
 }
 .quickstats .numbers {
-    font-size: 2em;
-    text-align: right;
-    margin-top: 20px;
+  font-size: 2em;
+  text-align: right;
+  margin-top: 20px;
 }
 .quickstats .numbers p {
-    margin: 0;
-    font-size: 18px;
-    line-height: 1.5;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 quickstats .statusIcon {
-    float: left;
+  float: left;
 }
 
 quickstats .statusText {
-    float: right;
+  float: right;
 }
 
 .quickstats .statustext-center {
-    text-align: center;
-    padding: 5px 10px 15px;
-    float:left;
+  text-align: center;
+  padding: 5px 10px 15px;
+  float: left;
 }
 .quickstats .statusicon-center {
-    text-align: center;
-    padding: 5px 5px 15px;
-    float:left;
+  text-align: center;
+  padding: 5px 5px 15px;
+  float: left;
 }
 
 quickstats .h7 {
-    font-size: .83em;
-    font-weight: bolder;
+  font-size: 0.83em;
+  font-weight: bolder;
 }

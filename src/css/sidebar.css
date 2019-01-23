@@ -75,3 +75,26 @@
   text-align: center;
   color: honeydew;
 }
+
+.main-panel {
+  background: rgba(203, 203, 210, 0.15);
+  position: relative;
+  float: right;
+
+  width: calc(100% - 260px);
+}
+
+/*          Changes for small display      */
+@media (max-width: 991px) {
+  .main-panel {
+    width: 100%;
+  }
+
+  .sidebar {
+    -webkit-transform: translate3d(991px, 0, 0);
+    -moz-transform: translate3d(991px, 0, 0);
+    -o-transform: translate3d(991px, 0, 0);
+    -ms-transform: translate3d(991px, 0, 0);
+    transform: translate3d(991px, 0, 0);
+  }
+}
