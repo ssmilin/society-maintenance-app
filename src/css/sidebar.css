@@ -84,8 +84,9 @@
   width: calc(100% - 260px);
 }
 .navbar-inverse {
-  border-radius: none !important;
+  border-radius: 0px !important;
 }
+
 /*          Changes for small display      */
 @media (max-width: 991px) {
   .main-panel {
