@@ -4,8 +4,6 @@ import "./css/wrapper.css";
 import "./css/sidebar.css";
 import "./css/content.css";
 
-import "./css/icon.css";
-
 import SidePanel from "./components/SidePanel";
 import Header from "./components/Header";
 import Main from "./components/Main";
