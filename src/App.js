@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "./css/wrapper.css";
 import "./css/sidebar.css";
 import "./css/content.css";
+import "./css/blog.css";
 
 import SidePanel from "./components/SidePanel";
 import Header from "./components/Header";

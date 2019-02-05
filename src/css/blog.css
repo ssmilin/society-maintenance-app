@@ -1,0 +1,52 @@
+/* header + content - sidebar */
+
+/*main panel - header bar */
+.contentpanel-wrapper {
+  position: relative;
+  height: 100vh;
+}
+.blogs {
+  border-radius: 10px;
+
+  margin-top: 20px;
+  border-bottom: 20px;
+  padding-bottom: 20px;
+  background-color: white;
+}
+.ui.form {
+  padding-left: 20px;
+  margin-right: 20px;
+  padding-top: 10px;
+}
+.ui.comments .comment .text {
+  font-size: 1.2em !important;
+}
+.ui.comments .comment .author {
+  font-size: 1.2em !important;
+}
+.commenticon {
+  padding-left: 40px;
+  padding-right: 15px;
+}
+.itempadding {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.commentpadding {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+i.icons {
+  font-size: 2.2em !important;
+}
+
+.ui.card {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+.ui.form textarea {
+  font-size: 1.4em !important;
+}

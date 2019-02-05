@@ -35,15 +35,15 @@ class SidePanel extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/user">
-                <i className="far fa-user-plus" />
-                <p>Add Users</p>
-              </NavLink>
-            </li>
-            <li>
               <NavLink to="/profile">
                 <i className="fas fa-user" />
                 <p>User Profile</p>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/user">
+                <i className="far fa-user-plus" />
+                <p>Add Users</p>
               </NavLink>
             </li>
             <li>

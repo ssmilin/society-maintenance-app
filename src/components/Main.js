@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import DashBoard from "../components/DashBoard";
+import Blog from "../components/blog";
 
 // The Main component renders one of the three provided
 // Routes (provided that one matches). Both the /roster
@@ -11,6 +12,7 @@ const Main = () => (
   <main>
     <Switch>
       <Route exact path="/" component={DashBoard} />
+      <Route exact path="/profile" component={Blog} />
     </Switch>
   </main>
 );
