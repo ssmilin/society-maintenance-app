@@ -3,7 +3,7 @@ import "../css/sidebar.css";
 import { Grid, Row, Col } from "react-bootstrap";
 
 import Footer from "../components/Footer";
-import { Card, Icon, Menu, Image, Item, Label, Form } from "semantic-ui-react";
+import { Card, Icon, Image, Item, Form } from "semantic-ui-react";
 import { Button, Comment, Header } from "semantic-ui-react";
 import str from "../img/str.jpg";
 import nayan from "../img/nayan.jpg";

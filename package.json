@@ -12,12 +12,15 @@
     "react-bootstrap": "0.32.4",
     "react-chartist": "latest",
     "react-dom": "latest",
+    "react-redux": "^6.0.1",
     "react-router-dom": "latest",
     "react-scripts": "2.0.3",
     "reactstrap": "7.0.2",
     "semantic-ui-react": "0.85.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "redux": "^4.0.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
