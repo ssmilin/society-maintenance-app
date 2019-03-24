@@ -1,14 +1,18 @@
 import React, { Component } from "react";
 
 import { NavLink } from "react-router-dom";
+import Calender from '../components/Calender';
 
-import logo from "../img/overleaf_og_logo.png";
-
-import DashBoard from "../components/DashBoard";
 
 //import '../css/icon.css';
 
 class SidePanel extends Component {
+  constructor(props) {
+    super(props);
+  }
+  handleCalenderChange = () => {
+
+  }
   render() {
     return (
       <div className="sidebar">
@@ -33,6 +37,7 @@ class SidePanel extends Component {
                 <i className="fa fa-pie-chart" />
                 <p>Dashboard</p>
               </NavLink>
+              <Calender onCalenderChange={this.handleCalenderChange} />
             </li>
             <li>
               <NavLink to="/profile">

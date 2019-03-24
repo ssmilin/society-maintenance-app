@@ -37,7 +37,10 @@
   padding-bottom: 30px;
   background-color: #2d2d2d;
 }
-
+.sidebar .nav .sidebar-calender {
+  margin-left: 50px;
+  font:12em;
+}
 .sidebar .log-name {
   display: inline-block;
   font-size: 30px;

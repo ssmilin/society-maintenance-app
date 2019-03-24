@@ -7,6 +7,7 @@
   "dependencies": {
     "bootstrap": "4.2.1",
     "chartist": "0.11.0",
+    "moment": "^2.24.0",
     "react": "16.5.2",
     "react-bootstrap": "0.32.4",
     "react-chartist": "latest",
@@ -23,5 +24,10 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
