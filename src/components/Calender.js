@@ -14,23 +14,29 @@ var textstyle = {
 }
 
 var expenses = {
+    'Apr 2019': {
+        drainage: "1000",
+        water: "20000",
+        security: "40000",
+        electricity: "60000"
+    },
     'Mar 2019': {
         drainage: "7000",
-        water: "10000",
-        security: "20000",
-        electricity: "50000"
+        water: "30000",
+        security: "50000",
+        electricity: "70000"
     },
     'Feb 2019': {
         drainage: "9000",
         water: "12010",
-        security: "10009",
-        electricity: "57000"
+        security: "60009",
+        electricity: "87000"
     },
     'Jan 2019': {
         drainage: "8000",
         water: "13010",
         security: "30009",
-        electricity: "87000"
+        electricity: "67000"
     }
 }
 function mapDispatchToProps(dispatch) {
@@ -45,19 +51,27 @@ class CalenderConnect extends Component {
             month: moment(),
         }
     }
-    incrementMonth = (event) => {
+    incrementMonth = () => {
         this.setState((state) => ({
             month: state.month.add(1, 'month')
         }));
+
     }
     decrementMonth = () => {
+
         this.setState((state) => ({
             month: state.month.subtract(1, 'month')
         }));
+
     }
+
     render() {
-        this.props.updateExpense(expenses[this.state.month.format('MMM YYYY')]);
-    
+
+        if( !expenses[this.state.month.format('MMM YYYY')] ) {
+            alert("Data Not Found");
+        } else {
+            this.props.updateExpense(expenses[this.state.month.format('MMM YYYY')]);
+        }
         return (
             <div className="sidebar-calender">
                 <h4>

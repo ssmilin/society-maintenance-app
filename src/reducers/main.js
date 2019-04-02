@@ -1,10 +1,10 @@
 import {UPDATE_EXPENSE} from '../constants/action-types';
 const initialstate = {
     currentMonth: {
-        drainage: "7000",
-        water: "10000",
-        security: "20000",
-        electricity: "50000"
+        drainage: "2000",
+        water: "12000",
+        security: "22000",
+        electricity: "50010"
     }
 }
 function rootReducer(state = initialstate, action)  {
