@@ -24,7 +24,7 @@ class DashBoardConnect extends Component {
                 <QuickStats
                   bigIcon="fas fa-truck"
                   statsText="Drainage"
-                  statsValue={this.props.currentMonth.drainage + " ₹"}
+                  statsValue={this.props.currentMonth.Drainage + " ₹"}
                   statsIcon="far fa-calendar-alt"
                   statsIconText="Last updated Jan 14"
                   color='Red'
@@ -36,7 +36,7 @@ class DashBoardConnect extends Component {
                 <QuickStats
                   bigIcon="fas fa-tint"
                   statsText="Water"
-                  statsValue={this.props.currentMonth.water + " ₹"}
+                  statsValue={this.props.currentMonth.Water + " ₹"}
                   statsIcon="far fa-calendar-alt"
                   statsIconText="Last updated Jan-28"
                   color='SkyBlue'
@@ -48,7 +48,7 @@ class DashBoardConnect extends Component {
                 <QuickStats
                   bigIcon="fas fa-handshake"
                   statsText="Security"
-                  statsValue={this.props.currentMonth.security + " ₹"}
+                  statsValue={this.props.currentMonth.Security + " ₹"}
                   statsIcon="far fa-calendar-alt"
                   statsIconText="Last updated-Jan 10"
                   color='Green'
@@ -60,7 +60,7 @@ class DashBoardConnect extends Component {
                 <QuickStats
                   bigIcon="fas fa-bolt"
                   statsText="Electricty"
-                  statsValue={this.props.currentMonth.electricity + " ₹"}
+                  statsValue={this.props.currentMonth.Electricity + " ₹"}
                   statsIcon="far fa-calendar-alt"
                   statsIconText="Last updated-Dec 1"
                   color='DangerRed'

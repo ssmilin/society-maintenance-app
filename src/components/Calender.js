@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import * as moment from 'moment';
 import { connect } from "react-redux";
 import updateExpense from '../actions/action';
+import JSPath from 'jspath';
+
 var hrefstyle = {
     'text-decoration': 'none',
     'color': 'white',
@@ -13,32 +15,34 @@ var textstyle = {
     'font-size': '16px'
 }
 
-var expenses = {
-    'Apr 2019': {
-        drainage: "1000",
-        water: "20000",
-        security: "40000",
-        electricity: "60000"
+/*var expenses = {
+    'April2019': {
+        Drainage: "1000",
+        Water: "20000",
+        Security: "40000",
+        Electricity: "60000"
     },
-    'Mar 2019': {
-        drainage: "7000",
-        water: "30000",
-        security: "50000",
-        electricity: "70000"
+    'March2019': {
+        Drainage: "7000",
+        Water: "30000",
+        Security: "50000",
+        Electricity: "70000"
     },
-    'Feb 2019': {
-        drainage: "9000",
-        water: "12010",
-        security: "60009",
-        electricity: "87000"
+    'February2019': {
+        Drainage: "9000",
+        Water: "12010",
+        Security: "60009",
+        Electricity: "87000"
     },
-    'Jan 2019': {
-        drainage: "8000",
-        water: "13010",
-        security: "30009",
-        electricity: "67000"
+    'January2019': {
+        Drainage: "8000",
+        Water: "13010",
+        Security: "30009",
+        Electricity: "67000"
     }
-}
+}*/
+
+
 function mapDispatchToProps(dispatch) {
     return {
         updateExpense: expenseList => dispatch(updateExpense(expenseList))
@@ -58,20 +62,58 @@ class CalenderConnect extends Component {
 
     }
     decrementMonth = () => {
-
         this.setState((state) => ({
             month: state.month.subtract(1, 'month')
         }));
-
     }
-
+    fetchData = (month) => {
+        let params = {
+            "societyname": "Greenpark",
+            "month": month
+        }     
+        let query = Object.keys(params)
+            .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(params[k]))
+            .join('&');
+        
+        let url = 'https://society-app-backend.herokuapp.com/expensereport/getmonthlyreport?' + query;
+        fetch(url, { 
+            method: 'GET' 
+        })
+        .then((data) => {
+            return data.json();
+        })
+        .then((data) => {
+            return this.parseJson(data);
+        })
+        .then((doc) => {
+            this.props.updateExpense(doc);
+        })
+        .catch((error) => {
+            console.log("Error ", error);
+            alert('Data Not Found');
+        });
+    }
+    parseJson = (data) => {
+        return new Promise(function(resolve, reject){
+            console.log("Enter Data $$$$$$", data);
+            if (data === 'Report does not exist') {
+                reject(data);
+            }
+            var amount = JSPath.apply('.expensedetails{"Security Drainage Water Electricity" *= .name}', data);
+            let initialstate ={};
+            amount.forEach((obj)=>{
+                initialstate[obj.name] = obj.amount;
+            })
+            resolve(initialstate);
+        });
+    }
     render() {
-
-        if( !expenses[this.state.month.format('MMM YYYY')] ) {
+        this.fetchData(this.state.month.format('MMMMYYYY'));
+       /* if( !expenses[this.state.month.format('MMMMYYYY')] ) {
             alert("Data Not Found");
         } else {
-            this.props.updateExpense(expenses[this.state.month.format('MMM YYYY')]);
-        }
+            this.props.updateExpense(expenses[this.state.month.format('MMMMYYYY')]);
+        }*/
         return (
             <div className="sidebar-calender">
                 <h4>
